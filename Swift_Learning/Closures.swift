@@ -28,14 +28,6 @@ let workersListInCompany = [
     Company(name: "ChainSys", workerId: 6),
 ]
 
-// Function
-func sortBySalary(worker: Workers) -> String {
-    if(worker.salary > 1000) {
-        return worker.name
-    }
-    return ""
-}
-
 // Closure : let/var <variable_name>: (<parameter>) -> return_type = {}
 let nameOfWorker: (Workers) -> (Bool) = { worker in
     return worker.salary >= 2000 && worker.location.elementsEqual("Madurai")

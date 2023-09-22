@@ -1,9 +1,5 @@
 // Closure
-print("Function Calling statement......")
-var workerName = sortBySalary(worker: listOfWorkers[0])
-print(workerName)
-
-print("\nClosure Calling Statement.......")
+print("Closure Calling Statement.......")
 let topWorkers = listOfWorkers.filter(nameOfWorkers)
 for worker in topWorkers {
     print(worker.name)
@@ -22,11 +18,23 @@ for company in getWorkerNameByCompany {
 
 // Enumeration
 
-print("\n Enumeration.......")
-let response = sendMessage(on: .INSTAGRAM)
-print(response)
+print("\nEnumeration.......")
+print(sendMessage(on: .INSTAGRAM))
+print(getMyOpinion(get: .SIVAKARTHI))
+print(isAvailablePremium(get: .YOUTUBE(subscriber: 2_000)))
 
+// Functions
 
+print("\nFunction concept........")
+print(getSum(2,3,4,5))
+print("Sum of two numbers : ",calSum(5, 6))
+print("Product of the two number : ",calProduct(calSum, calProduct, 5, 5))
 
-
-
+var currentValue = -4
+let moveNearerToZero = chooseStep(backward: currentValue > 0)
+// moveNearerToZero now refers to the nested stepForward() function
+while currentValue != 0 {
+    print("\(currentValue)... ")
+    currentValue = moveNearerToZero(currentValue)
+}
+print("zero!")

@@ -12,6 +12,7 @@
 		5265F8652ABCB93300355DA8 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265F8642ABCB93300355DA8 /* Enumerations.swift */; };
 		5265F8672ABCB95600355DA8 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265F8662ABCB95600355DA8 /* Initialization.swift */; };
 		5265F8692ABCB97E00355DA8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265F8682ABCB97E00355DA8 /* Protocols.swift */; };
+		52D287C62ABD9B11006DA280 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D287C52ABD9B11006DA280 /* Function.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		5265F8642ABCB93300355DA8 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		5265F8662ABCB95600355DA8 /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		5265F8682ABCB97E00355DA8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		52D287C52ABD9B11006DA280 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				5265F8642ABCB93300355DA8 /* Enumerations.swift */,
 				5265F8662ABCB95600355DA8 /* Initialization.swift */,
 				5265F8682ABCB97E00355DA8 /* Protocols.swift */,
+				52D287C52ABD9B11006DA280 /* Function.swift */,
 			);
 			path = Swift_Learning;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				5265F8692ABCB97E00355DA8 /* Protocols.swift in Sources */,
 				5265F8542ABCB16800355DA8 /* main.swift in Sources */,
 				5265F8632ABCB7D100355DA8 /* Closures.swift in Sources */,
+				52D287C62ABD9B11006DA280 /* Function.swift in Sources */,
 				5265F8652ABCB93300355DA8 /* Enumerations.swift in Sources */,
 				5265F8672ABCB95600355DA8 /* Initialization.swift in Sources */,
 			);
@@ -267,6 +271,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -278,6 +283,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
