@@ -42,3 +42,22 @@ func chooseStep(backward: Bool) -> (Int) -> (Int) {
     }
     return backward ? stepBackward : stepForward
 }
+
+// Properties
+class DataImporter {
+    var filename = "data.txt"
+}
+
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data: [String] = []
+}
+
+func getNameByIdFunction(worker: [Workers], Id: Int) -> String {
+    for iterator in worker {
+        if(iterator.id == Id) { return iterator.name }
+    }
+    return ""
+}
+

@@ -37,7 +37,11 @@ let nameOfWorkers: (Workers) -> Bool = { $0.salary >= 2000 && $0.location.elemen
 let getWorkersByCompany: (Company) -> Bool = { $0.name.elementsEqual("Zoho") }
 
 // In parameter we can pass only Objects
-let getNameById: (Workers, Int) -> Bool = { work, id in return id == work.id}
+let getWorkerById: (Workers, Int) -> Bool = { work, id in return id == work.id}
+let getNameById: (Workers, Int) -> String = { work, id in
+    if(id == work.id) { return work.name }
+    else { return "" }
+}
 
 
 

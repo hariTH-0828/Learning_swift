@@ -1,8 +1,29 @@
-//
-//  Initialization.swift
-//  Swift_Learning
-//
-//  Created by Hariharan R S on 21/09/23.
-//
+// Default property value
+struct Fahrenheit {
+    var temperature: Double = 32.0
+}
 
-import Foundation
+// Initializer
+struct Celsius {
+    var temperature: Double
+    
+    init() {
+        temperature = 32.0
+    }
+}
+
+// Initialization Parameter
+struct Square {
+    var length: Int
+    var width: Int
+    
+    init(length: Int, width: Int) {
+        self.length = length
+        self.width = width
+    }
+    
+    func size() -> Int {
+        return length * width
+    }
+}
+
