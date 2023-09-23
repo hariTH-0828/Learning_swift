@@ -69,5 +69,9 @@ let family = Children(fatherName: "Saravanan", motherName: "Rajula", son: "Hari"
 print(family.toString())
 
 print("\n")
-let bike = Bike("Yamaha", "R15", 155, 6)
-print("Gear : ",bike.getGear)
+var bike = Bike(brandName: "Yamaha", model: "R15", engine: 155, gear: 5)
+print(bike.toString())
+bike.actionGear = 6
+print("Gear level updated : ",bike.actionGear)
+print(bike.toString())
+

@@ -27,20 +27,35 @@ class Children: Parents {
     }
 }
 
-class Bike {
-    var getGear: Int {
-        get { return gear }
-    }
-    
-    var getBrand: String {
-        get { return brandName }
-    }
+struct Bike {
     private var brandName: String
     private var model: String
     private var engine: Int
     private var gear: Int
     
-    init(_ brandName: String, _ model: String, _ engine: Int, _ gear: Int) {
+    var actionGear: Int {
+        get { return gear }
+        set(newGear) { gear = newGear }
+    }
+    
+    var actionBrandName: String {
+        get { return brandName }
+        set(newBrandName) {
+            brandName = newBrandName
+        }
+    }
+    
+    var actionModel: String {
+        get { return model }
+        set(newModel) { model = newModel }
+    }
+    
+    var actionEngine: Int {
+        get { return engine }
+        set(newEngine) { engine = newEngine }
+    }
+    
+    init(brandName: String, model: String, engine: Int, gear: Int) {
         self.brandName = brandName
         self.model = model
         self.engine = engine
