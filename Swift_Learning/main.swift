@@ -62,3 +62,12 @@ print(celsius)
 
 var square = Square(length: 4, width: 4)
 print("Square size : ",square.size())
+
+// Inheritance
+print("\n")
+let family = Children(fatherName: "Saravanan", motherName: "Rajula", son: "Hari", daughter: "Sri")
+print(family.toString())
+
+print("\n")
+let bike = Bike("Yamaha", "R15", 155, 6)
+print("Gear : ",bike.getGear)
