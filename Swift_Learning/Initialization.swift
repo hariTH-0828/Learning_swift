@@ -27,3 +27,17 @@ struct Square {
     }
 }
 
+class HoursToMin {
+    private var hours: Int
+    
+    init(_ hours: Int) {
+        self.hours = hours
+    }
+    
+    var actionHoursToMin: Int {
+        get { return hours }
+        set(newHours) { hours = newHours }
+    }
+}
+
+
