@@ -46,3 +46,30 @@ class VendingMachine {
         inventory[name] = updateItem
     }
 }
+
+struct PersonInfo {
+    var personDetail: Dictionary<String, Int?> = [
+        "Hariharan": 1,
+        "Manoj": 2
+    ]
+    var favouriteSnake: Dictionary<String, String?> = [
+        "Hariharan": nil,
+        "Manoj": "Juice"
+    ]
+    
+    enum errorCases: Error {
+        case PERSON_UNAVAILABLE
+    }
+    
+    func buyFavouriteSnake(person: String) throws -> String {
+        guard personDetail[person] != nil else {
+            throw errorCases.PERSON_UNAVAILABLE
+        }
+        
+        let isAvail = favouriteSnake[person]
+        if let avail = isAvail {
+            return "Thank you for purchase \(avail ?? "Candy Bar")"
+        }
+        return ""
+    }
+}

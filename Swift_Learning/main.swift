@@ -8,19 +8,11 @@ for worker in topWorkers {
 print("\nClosure : Get worker name by company....")
 let getWorkerNameByCompany = workersListInCompany.filter(getWorkersByCompany)
 
-//for company in getWorkerNameByCompany {
-//    let workerDetails = listOfWorkers.filter { worker in
-//        return getWorkerById(worker, company.workerId)
-//    }
-//    print(workerDetails)
-//}
-
-    for company in getWorkerNameByCompany {
-//        let workerDetails = listOfWorkers.filter { worker in return worker.id == company.workerId}.first?.name
-        let worker = getWorkerByID(company.workerId)?.name
-        print(worker as Any)
-    }
-
+for company in getWorkerNameByCompany {
+//    let workerDetails = listOfWorkers.filter { worker in return worker.id == company.workerId}.first?.name
+    let worker = getWorkerByID(company.workerId)?.name
+    print(worker as Any)
+}
 
 // Enumeration
 
@@ -35,22 +27,6 @@ print("\nFunction concept........")
 print(getSum(2,3,4,5))
 print("Sum of two numbers : ",calSum(5, 6))
 print("Product of the two number : ",calProduct(calSum, calProduct, 5, 5))
-
- 
-//    var currentValue = -4
-//    let moveNearerToZero = chooseStep(backward: currentValue > 0)
-//    // moveNearerToZero now refers to the nested stepForward() function
-//    while currentValue != 0 {
-//        print("\(currentValue)... ")
-//        currentValue = moveNearerToZero(currentValue)
-//    }
-//    print("zero!")
-
-
-let manager = DataManager()
-manager.data.append("Some data")
-manager.data.append("Some more data")
-//print(manager.data)
 
 var resultData = getNameByIdFunction(worker: listOfWorkers, Id: 2)
 
@@ -84,4 +60,90 @@ print(bike.toString())
 print("\n")
 var vendingMachine = VendingMachine()
 try vendingMachine.purchase(itemName: "Choculate")
+let infoPerson = PersonInfo()
+let itemPurchase = try? infoPerson.buyFavouriteSnake(person: "Hariharan")
+print(itemPurchase as Any)
+// Protocols
 
+print("\nProtocols........")
+struct SomeOperation: MathematicalOperations {
+    var addition: (Int, Int) -> Int {
+        get {
+            return { (a, b) in return a + b }
+        }
+    }
+    
+    var subtraction: (Int, Int) -> Int {
+        get {
+            return { (a, b) in return a - b }
+        }
+    }
+}
+
+var additionResult = SomeOperation().addition(5, 5)
+var subtractResult = SomeOperation().subtraction(5, 5)
+print("Addition : ",additionResult, "Subtraction : ",subtractResult)
+
+struct Aeroplane: Flyable {
+    var airSpeedVelocity: Int = 120
+}
+
+let aeroplaneModel = Aeroplane()
+print(aeroplaneModel.fly())
+print(aeroplaneModel.airSpeedVelocity)
+wishHappyBirthday(to: collection)
+
+let greeting = Greeting("Hariharan", 23)
+let wishes = greeting.showGreeting(to: collection)
+print(wishes)
+
+// Inout -> This keyword is like pointer
+
+func square(_ num: inout Int) {
+    num *= num
+}
+
+var value = 5
+square(&value)
+print(value)
+
+
+// willSet and didSet
+print("\n")
+class Rectangle {
+    var width: Double = 0.0 {
+        willSet {
+            print("About to set width to \(newValue)")
+            if newValue < 0 {
+                print("Invalid value! Width cannot be negative.")
+            }
+        }
+        didSet {
+            if width < 0 {
+                print("Setting width to 0 because it was negative.")
+                width = 0
+            }
+        }
+    }
+
+    var height: Double = 0.0 {
+        willSet {
+            print("About to set height to \(newValue)")
+            if newValue < 0 {
+                print("Invalid value! Height cannot be negative.")
+            }
+        }
+        didSet {
+            if height < 0 {
+                print("Setting height to 0 because it was negative.")
+                height = 0
+            }
+        }
+    }
+}
+
+let rect = Rectangle()
+rect.width = 5
+rect.width = -3
+rect.height = 7
+rect.height = -2
