@@ -147,3 +147,19 @@ rect.width = 5
 rect.width = -3
 rect.height = 7
 rect.height = -2
+
+
+// Methods
+var count = Counter()
+count.increment()
+count.increment(by: 3)
+print(count.count)
+print(Counter.attemp)
+
+SomeClass.typeMethod()
+
+SomeClass().nonTypeMethod()
+
+someString.getUpdate()
+print(someString)
+
