@@ -81,6 +81,18 @@ func insertInArray(array original: [Int], element value: Int, at positon: Int) -
     return resultArray
 }
 
-func checkIsEmpty(array container: [Int]) throws -> Bool {
-    
+func checkIsEmpty(array container: [Int]) -> Bool {
+    if container.count > 0 {
+        return false
+    }else {
+        return true
+    }
+}
+
+func isContain<T: Comparable>(array original: [T], find element: T) -> Bool {
+    let contains = original.filter({ $0 == element })
+    if !contains.isEmpty {
+        return true
+    }
+    return false
 }

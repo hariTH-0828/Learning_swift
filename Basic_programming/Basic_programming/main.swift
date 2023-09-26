@@ -91,5 +91,9 @@ print(insertElementAt)
 
 // Check is empty or null
 let emptyArray: [Int] = []
-var check_isEmpty = try checkIsEmpty(array: emptyArray)
+var check_isEmpty = checkIsEmpty(array: intArray)
 print(check_isEmpty)
+
+// Check element is contain or not
+var checkIsContain = isContain(array: intArray, find: 7)
+print(checkIsContain)
