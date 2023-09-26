@@ -162,4 +162,3 @@ SomeClass().nonTypeMethod()
 
 someString.getUpdate()
 print(someString)
-
