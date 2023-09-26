@@ -54,3 +54,42 @@ print(add_prefix)
 var delete_prefix = deletePrefix(string: "Harith", prefix: 2)
 print(delete_prefix)
 
+/****  Array Operations  ****/
+
+// Merge array
+var even: [Int] = [2,4,6,8]
+var odd: [Int] = [1,3,5,7,9]
+var merge_array = mergeArray(&even, &odd)
+print(merge_array)
+
+// split array into equal size
+var array = ["Hari", "Aji", "Vishnu", "Karthi", "Mani"]
+let split_array_equal_size = splitArrayEqualSize(array: array)
+print(split_array_equal_size)
+
+// Find and Replace value in array
+let intArray = [1,2,3,7,5,6]
+var find_and_replace = findAndReplace(array: intArray, findBy: 7, replaceWith: 4)
+print(find_and_replace)
+
+// Find index of an array
+var findIndex = findIndexOfElement(array: intArray, element: 7)
+print(findIndex)
+
+// Delete element in array
+var deleteElement = delete(array: intArray, delete: 7)
+print(deleteElement)
+
+// Insert element in array
+//var insertElement = insertInArray(array: intArray, element: 0)
+var insertElement = insertClosure(intArray, 0)
+print(insertElement)
+
+// Insert element in array at given position
+var insertElementAt = insertInArray(array: intArray, element: 4, at: 3)
+print(insertElementAt)
+
+// Check is empty or null
+let emptyArray: [Int] = []
+var check_isEmpty = try checkIsEmpty(array: emptyArray)
+print(check_isEmpty)
