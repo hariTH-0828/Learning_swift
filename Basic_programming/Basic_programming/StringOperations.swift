@@ -103,4 +103,38 @@ func integerToString(_ intArray: [Int]) -> String {
     return String(resultSet)
 }
 
+func deleteSuffix(string word: String, prefix endWith: Int) -> String {
+    var result_string = ""; let range = word.count - endWith
+    
+    if endWith > word.count {
+        return "Range out of bound"
+    }
+    
+    var index = 0
+    for str in word {
+        if index == range { break }
+        result_string += String(str)
+        index += 1
+    }
+    return result_string
+}
 
+func appendSuffix(string word: String, prefix substring: String) -> String {
+    var result = word
+    for char in substring { result += String(char) }
+    return result
+}
+
+func appendPrefix(string word: String, prefix substring: String) -> String {
+    var result = substring
+    for char in word { result += String(char) }
+    return result
+}
+
+func deletePrefix(string word: String, prefix endWith: Int) -> String {
+    var wordSet = Array(word); let limit = (word.count - endWith) - 1
+    for index in stride(from: word.count - 1, to: limit, by: -1) {
+        wordSet.remove(at: index)
+    }
+    return String(wordSet)
+}

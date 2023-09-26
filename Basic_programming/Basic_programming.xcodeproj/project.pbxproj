@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		522654202AC298C50001B34D /* StringOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226541F2AC298C50001B34D /* StringOperations.swift */; };
+		522654222AC2F9C20001B34D /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522654212AC2F9C20001B34D /* ArrayOperation.swift */; };
 		523873AB2AC1B3CA00507C7B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873AA2AC1B3CA00507C7B /* main.swift */; };
-		523873B22AC1B40C00507C7B /* TripleSums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873B12AC1B40C00507C7B /* TripleSums.swift */; };
-		523873B42AC1B4F100507C7B /* AbsoluteDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873B32AC1B4F100507C7B /* AbsoluteDifference.swift */; };
-		523873B62AC1B59A00507C7B /* OneOfThemTwenty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873B52AC1B59A00507C7B /* OneOfThemTwenty.swift */; };
-		523873B82AC1EFB400507C7B /* SearchInsertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873B72AC1EFB400507C7B /* SearchInsertPosition.swift */; };
-		523873BC2AC1FE3800507C7B /* JewelsAndStones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873BB2AC1FE3800507C7B /* JewelsAndStones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,13 +26,9 @@
 
 /* Begin PBXFileReference section */
 		5226541F2AC298C50001B34D /* StringOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringOperations.swift; sourceTree = "<group>"; };
+		522654212AC2F9C20001B34D /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
 		523873A72AC1B3CA00507C7B /* Basic_programming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Basic_programming; sourceTree = BUILT_PRODUCTS_DIR; };
 		523873AA2AC1B3CA00507C7B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		523873B12AC1B40C00507C7B /* TripleSums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripleSums.swift; sourceTree = "<group>"; };
-		523873B32AC1B4F100507C7B /* AbsoluteDifference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsoluteDifference.swift; sourceTree = "<group>"; };
-		523873B52AC1B59A00507C7B /* OneOfThemTwenty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOfThemTwenty.swift; sourceTree = "<group>"; };
-		523873B72AC1EFB400507C7B /* SearchInsertPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInsertPosition.swift; sourceTree = "<group>"; };
-		523873BB2AC1FE3800507C7B /* JewelsAndStones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewelsAndStones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +61,8 @@
 		523873A92AC1B3CA00507C7B /* Basic_programming */ = {
 			isa = PBXGroup;
 			children = (
+				522654212AC2F9C20001B34D /* ArrayOperation.swift */,
 				523873AA2AC1B3CA00507C7B /* main.swift */,
-				523873B12AC1B40C00507C7B /* TripleSums.swift */,
-				523873B32AC1B4F100507C7B /* AbsoluteDifference.swift */,
-				523873B52AC1B59A00507C7B /* OneOfThemTwenty.swift */,
-				523873B72AC1EFB400507C7B /* SearchInsertPosition.swift */,
-				523873BB2AC1FE3800507C7B /* JewelsAndStones.swift */,
 				5226541F2AC298C50001B34D /* StringOperations.swift */,
 			);
 			path = Basic_programming;
@@ -138,13 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523873BC2AC1FE3800507C7B /* JewelsAndStones.swift in Sources */,
 				522654202AC298C50001B34D /* StringOperations.swift in Sources */,
-				523873B82AC1EFB400507C7B /* SearchInsertPosition.swift in Sources */,
-				523873B62AC1B59A00507C7B /* OneOfThemTwenty.swift in Sources */,
+				522654222AC2F9C20001B34D /* ArrayOperation.swift in Sources */,
 				523873AB2AC1B3CA00507C7B /* main.swift in Sources */,
-				523873B42AC1B4F100507C7B /* AbsoluteDifference.swift in Sources */,
-				523873B22AC1B40C00507C7B /* TripleSums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

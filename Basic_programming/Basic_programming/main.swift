@@ -37,3 +37,20 @@ print(string_to_int)
 // Change Integer to String
 var integer_to_string = integerToString(string_to_int)
 print(integer_to_string)
+
+// Delete a suffix
+var suffix_delete = deleteSuffix(string: "Hariharan", prefix: 0)
+print(suffix_delete)
+
+// Add a suffix
+var add_suffix = appendSuffix(string: "Hari", prefix: "saravanan")
+print(add_suffix)
+
+// Add a prefix
+var add_prefix = appendPrefix(string: "saravanan", prefix: "Hari")
+print(add_prefix)
+
+// Delete a prefix
+var delete_prefix = deletePrefix(string: "Harith", prefix: 2)
+print(delete_prefix)
+
