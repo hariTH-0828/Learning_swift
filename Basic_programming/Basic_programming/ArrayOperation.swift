@@ -96,3 +96,23 @@ func isContain<T: Comparable>(array original: [T], find element: T) -> Bool {
     }
     return false
 }
+
+func arrayToSet<T>(array original: [T]) -> Set<T> {
+    var setHolder: Set<T> = []
+    for num in original { setHolder.insert(num) }
+    return setHolder
+}
+
+func setToArray<T>(array original: Set<T>) -> [T] {
+    var arrayHolder: [T] = []
+    for element in original { arrayHolder += [element] }
+    return arrayHolder
+}
+
+func getArrayByRange<T>(array original: [T], startFrom from: Int, endWith to: Int) -> [T] {
+    var sub_array = original[from...to]
+    return Array(sub_array)
+}
+
+
+

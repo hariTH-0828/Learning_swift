@@ -68,7 +68,7 @@ let split_array_equal_size = splitArrayEqualSize(array: array)
 print(split_array_equal_size)
 
 // Find and Replace value in array
-let intArray = [1,2,3,7,5,6]
+let intArray = [1,2,3,7,8,9]
 var find_and_replace = findAndReplace(array: intArray, findBy: 7, replaceWith: 4)
 print(find_and_replace)
 
@@ -97,3 +97,51 @@ print(check_isEmpty)
 // Check element is contain or not
 var checkIsContain = isContain(array: intArray, find: 7)
 print(checkIsContain)
+
+// creating set and convert set to array and array to set
+var arrayHolder: [Int] = [1,2,3,1,4,2]
+let convertToSet = arrayToSet(array: arrayHolder)
+print(convertToSet)
+let convertToArray = setToArray(array: convertToSet)
+print(convertToArray)
+
+//var filterResult = arrayHolder.filter({ element in return element == 1 })
+//print(filterResult)
+
+// Subscripting of an array with range
+var getSubArray = getArrayByRange(array: intArray, startFrom: 0, endWith: 3)
+print(getSubArray)
+var intArrayCopy = intArray
+intArrayCopy.insert(contentsOf: [4,5,6], at: 3)
+print(intArrayCopy)
+
+/**** Dictionary operation **/
+
+// create a dictionary and insert value and keys
+var intDictionary: Dictionary<Int, Int> = [:]  // Initialize the dictionary in a variable
+
+// insert key and values in a dictionary
+intDictionary[1] = 1000
+intDictionary[2] = 2000
+intDictionary[3] = 3000
+
+var stringDictionary: Dictionary<Character, String> = [:]
+stringDictionary["a"] = "Arun"
+stringDictionary["b"] = "Bala"
+stringDictionary["c"] = "Charan"
+
+getValues(Dictionary: stringDictionary)
+
+var secondDic: Dictionary<Int, Int> = [
+    4: 4000,
+    5: 5000,
+    6: 6000
+]
+var dictionary_merge = mergeDictionary(intDictionary, secondDic)
+print(dictionary_merge)
+
+dictionary_merge =  changeValueInMap(Dictionary: dictionary_merge, key: 6, modify_value: 7000)
+print(dictionary_merge)
+
+dictionary_merge = removeValueInMap(Dictionary: dictionary_merge, key: 6)
+print(dictionary_merge)

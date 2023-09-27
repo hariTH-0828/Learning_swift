@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		522654202AC298C50001B34D /* StringOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226541F2AC298C50001B34D /* StringOperations.swift */; };
 		522654222AC2F9C20001B34D /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522654212AC2F9C20001B34D /* ArrayOperation.swift */; };
+		5231B7772AC3FF660025270E /* DictionaryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231B7762AC3FF660025270E /* DictionaryOperation.swift */; };
 		523873AB2AC1B3CA00507C7B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523873AA2AC1B3CA00507C7B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		5226541F2AC298C50001B34D /* StringOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringOperations.swift; sourceTree = "<group>"; };
 		522654212AC2F9C20001B34D /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
+		5231B7762AC3FF660025270E /* DictionaryOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryOperation.swift; sourceTree = "<group>"; };
 		523873A72AC1B3CA00507C7B /* Basic_programming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Basic_programming; sourceTree = BUILT_PRODUCTS_DIR; };
 		523873AA2AC1B3CA00507C7B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				522654212AC2F9C20001B34D /* ArrayOperation.swift */,
 				523873AA2AC1B3CA00507C7B /* main.swift */,
 				5226541F2AC298C50001B34D /* StringOperations.swift */,
+				5231B7762AC3FF660025270E /* DictionaryOperation.swift */,
 			);
 			path = Basic_programming;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 				522654202AC298C50001B34D /* StringOperations.swift in Sources */,
 				522654222AC2F9C20001B34D /* ArrayOperation.swift in Sources */,
 				523873AB2AC1B3CA00507C7B /* main.swift in Sources */,
+				5231B7772AC3FF660025270E /* DictionaryOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
