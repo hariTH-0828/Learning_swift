@@ -13,22 +13,34 @@ func mergeDictionary<T>(_ dictionaryOne: Dictionary<T, T>, _ dictionaryTwo: Dict
     return result
 }
 
-func changeValueInMap(Dictionary map: Dictionary<Int, Int>, key keyId: Int, modify_value value: Int) -> Dictionary<Int, Int> {
+//func changeValueInMap(Dictionary map: Dictionary<Int, Int>, key keyId: Int, modify_value value: Int) -> Dictionary<Int, Int> {
+//    var result = map
+//    if var status = result[keyId] {
+//        result[keyId] = value
+//    }
+//    return result
+//}
+
+//func removeValueInMap(Dictionary map: Dictionary<Int, Int>, key keyId: Int) -> Dictionary<Int, Int> {
+//    var result = map
+//    if var status = result[keyId] {
+//        result[keyId] = nil
+//    }
+//    return result
+//}
+
+var changeValueInMap: (Dictionary<Int, Int>, Int, Int) -> Dictionary<Int, Int> = { map, key, value  in
     var result = map
-    for key in map.keys {
-        if key == keyId {
-            result[key] = value
-        }
+    if var status = result[key] {
+        result[key] = value
     }
     return result
 }
 
-func removeValueInMap(Dictionary map: Dictionary<Int, Int>, key keyId: Int) -> Dictionary<Int, Int> {
+var removeValue: (Dictionary<Int, Int>, Int) -> Dictionary<Int, Int> = { map, key  in
     var result = map
-    for key in map.keys {
-        if key == keyId {
-            result[key] = nil
-        }
+    if var status = result[key] {
+        result[key] = nil
     }
     return result
 }

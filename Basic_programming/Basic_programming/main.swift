@@ -140,8 +140,8 @@ var secondDic: Dictionary<Int, Int> = [
 var dictionary_merge = mergeDictionary(intDictionary, secondDic)
 print(dictionary_merge)
 
-dictionary_merge =  changeValueInMap(Dictionary: dictionary_merge, key: 6, modify_value: 7000)
+dictionary_merge = changeValueInMap(dictionary_merge, 6, 7000)
 print(dictionary_merge)
 
-dictionary_merge = removeValueInMap(Dictionary: dictionary_merge, key: 6)
+dictionary_merge = removeValue(dictionary_merge, 6)
 print(dictionary_merge)
