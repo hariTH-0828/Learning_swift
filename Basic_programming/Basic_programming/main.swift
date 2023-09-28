@@ -3,7 +3,7 @@ var char_sets = stringToChar("String")
 print(char_sets)
 
 // split a string with range
-var split_with_range = splitWithRange(string: "Hariharan", range: 1)
+var split_with_range = splitWithRange(string: "Hariharan", range: 2)
 print(split_with_range)
 
 // Merge a String
@@ -11,8 +11,8 @@ var merge_string = mergeTwoString(one: "Hello", another: " World")
 print(merge_string)
 
 // Find and Replace
-var replace_word = findAndReplace(string: "Hariha", find: "ha", replace: "th")
-print(replace_word)
+var findNReplace = findAndReplace(wordToFind: "ha", replacement: "th", in: "Hariha")
+print(findNReplace)
 
 // Check contains a substring
 var isPresent = isContains(string: "Hariharan", subString: "Hari")
@@ -31,7 +31,7 @@ var remove_whitespace = removeWhiteSpaces("Hello world ")
 print(remove_whitespace)
 
 // Change String to Integer
-var string_to_int: [Int] = stringToInt("Hello world")
+var string_to_int = stringToInt("Hello world")
 print(string_to_int)
 
 // Change Integer to String
@@ -39,11 +39,11 @@ var integer_to_string = integerToString(string_to_int)
 print(integer_to_string)
 
 // Delete a suffix
-var suffix_delete = deleteSuffix(string: "Hariharan", prefix: 0)
+var suffix_delete = deleteSuffix(string: "Hariharan", suffix: "haran")
 print(suffix_delete)
 
 // Add a suffix
-var add_suffix = appendSuffix(string: "Hari", prefix: "saravanan")
+var add_suffix = appendSuffix(string: "Hari", suffix: "saravanan")
 print(add_suffix)
 
 // Add a prefix
@@ -51,7 +51,7 @@ var add_prefix = appendPrefix(string: "saravanan", prefix: "Hari")
 print(add_prefix)
 
 // Delete a prefix
-var delete_prefix = deletePrefix(string: "Harith", prefix: 2)
+var delete_prefix = deletePrefix(string: "Harisaravanan", prefix: "Hari")
 print(delete_prefix)
 
 /****  Array Operations  ****/
@@ -145,3 +145,7 @@ print(dictionary_merge)
 
 dictionary_merge = removeValue(dictionary_merge, 6)
 print(dictionary_merge)
+
+var myName = "Hariharan.R.S"
+let trimmedName = trim(string: myName, character: ".")
+print(trimmedName)

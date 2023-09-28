@@ -110,7 +110,7 @@ func setToArray<T>(array original: Set<T>) -> [T] {
 }
 
 func getArrayByRange<T>(array original: [T], startFrom from: Int, endWith to: Int) -> [T] {
-    var sub_array = original[from...to]
+    let sub_array = original[from...to]
     return Array(sub_array)
 }
 

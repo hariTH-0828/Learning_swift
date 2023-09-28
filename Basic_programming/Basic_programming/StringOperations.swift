@@ -1,49 +1,41 @@
 func stringToChar(_ words: String) -> [Character] {
-    var charSet: [Character] = []
-    
-    for iterator in words { charSet.append(iterator) }
-    return charSet
+   /* 
+        var charSet: [Character] = []
+        for iterator in words { charSet.append(iterator) }
+    */
+    return Array(words)
 }
 
 func splitWithRange(string word: String, range to: Int) -> [String] {
-    var wordSet: [String] = []
-    var subString: String = ""; var count: Int = 0
-    
-    for iterator in word {
-        if(count == to) {
-            wordSet.append(subString)
-            subString.removeAll(); count = 0
+    let character_array = Array(word)
+    var stringArray: [String] = []
+    for index in character_array.indices {
+        if index <= character_array.count - to {
+            let sub_word = String(character_array[index..<index+to])
+            stringArray.append(sub_word)
         }
-        subString.append(iterator)
-        count += 1
     }
-    wordSet.append(subString)
-    return wordSet
+    return stringArray
+}
+
+func trim(string word: String, character exceptChar: String) -> String {
+    let trimmedString = word.map { char in
+        exceptChar.contains(char) ? " " : String(char)
+    }.joined()
+    return trimmedString
 }
 
 func mergeTwoString(one wordOne: String, another wordTwo: String) -> String {
     return wordOne + wordTwo
 }
 
-func findAndReplace(string word: String, find findString: String, replace replaceString: String) -> String {
-    
-    let length: Int = findString.count
-    var splited_words = splitWithRange(string: word, range: length)
-    
-    var count = 0
-    for possibilities in splited_words {
-        if possibilities == findString {
-            splited_words[count] = replaceString
-        }
-        count += 1
-    }
-    
-    let result: String = splited_words.joined()
-    return result
+func findAndReplace(wordToFind: String, replacement: String, in originalString: String) -> String {
+    let modifiedString = originalString.replacing(wordToFind, with: replacement)
+    return modifiedString
 }
 
-func isContains(string fighter: String, subString opponenet: String) -> Bool{
-    let length = opponenet.count
+func isContains(string fighter: String, subString opponent: String) -> Bool{
+    /* let length = opponenet.count
     let splitted_word = splitWithRange(string: fighter, range: length)
     
     for possibilites in splitted_word {
@@ -51,18 +43,23 @@ func isContains(string fighter: String, subString opponenet: String) -> Bool{
             return true
         }
     }
-    return false
+    return false */
+    
+    if fighter.contains(opponent) {
+        return true
+    }else { return false }
 }
 
-func capitalizeFirstLetter(_ word: String) -> String {
-    var wordSet = Array(word)
+func capitalizeFirstLetter(_ word: String) -> String{
+    /* var wordSet = Array(word)
     wordSet[0] = Character(wordSet[0].uppercased())
-    
-    return String(wordSet)
+    return String(wordSet) */
+    let letters = word.compactMap( {$0} )
+    return letters[0].uppercased() + letters[1..<letters.count]
 }
 
 func capitalizeAllChar(_ word: String) -> String {
-    var wordSet = Array(word); var index = 0
+    /* var wordSet = Array(word); var index = 0
     for char in word {
         if(char.isLetter && char.asciiValue! >= 97) {
             let charId = char.asciiValue! - 32
@@ -70,41 +67,43 @@ func capitalizeAllChar(_ word: String) -> String {
         }
         index += 1
     }
-    return String(wordSet)
+    return String(wordSet) */
+    let letters = word.map { char in
+        char.isLetter ? char.uppercased() : String(char)
+    }.joined()
+    return letters
 }
 
 func removeWhiteSpaces(_ word: String) -> String {
-    var resultString: String = ""
-    for char in word {
+    /* for char in word {
         if(char != " ") { resultString = resultString + String(char) }
-    }
-    
-    return resultString
+    } */
+    return word.filter({!$0.isWhitespace})
 }
 
-func stringToInt(_ word: String) -> [Int] {
-    var resultSet: [Int] = []
-    
+func stringToInt(_ word: String) -> [UInt8] {
+    /* var resultSet: [Int] = []
     for char in word {
         resultSet.append(Int(char.asciiValue!))
     }
-    
-    return resultSet
+    return resultSet */
+    let charIntArray = word.compactMap { $0.asciiValue }
+    return charIntArray
 }
 
-func integerToString(_ intArray: [Int]) -> String {
-    var resultSet: String = ""
-    
+func integerToString(_ UintArray: [UInt8]) -> String{
+    /* var resultSet: String = ""
     for value in intArray {
         let unsignedInt: UInt8 = UInt8(value)
         resultSet.append(Character(UnicodeScalar(unsignedInt)))
     }
-    
-    return String(resultSet)
+    return String(resultSet) */
+    let word = String(UintArray.map { Character(UnicodeScalar($0)) })
+    return word
 }
 
-func deleteSuffix(string word: String, prefix endWith: Int) -> String {
-    var result_string = ""; let range = word.count - endWith
+func deleteSuffix(string word: String, suffix endWith: String) -> String {
+    /* var result_string = ""; let range = word.count - endWith
     
     if endWith > word.count {
         return "Range out of bound"
@@ -116,25 +115,35 @@ func deleteSuffix(string word: String, prefix endWith: Int) -> String {
         result_string += String(str)
         index += 1
     }
-    return result_string
+    return result_string */
+    if word.hasSuffix(endWith) {
+        return word.replacing(endWith, with: "")
+    }
+    return "endWith is not present with string"
 }
 
-func appendSuffix(string word: String, prefix substring: String) -> String {
-    var result = word
+func appendSuffix(string word: String, suffix substring: String) -> String {
+    /* var result = word
     for char in substring { result += String(char) }
-    return result
+    return result */
+    return word + substring
 }
 
 func appendPrefix(string word: String, prefix substring: String) -> String {
-    var result = substring
+    /* var result = substring
     for char in word { result += String(char) }
-    return result
+    return result */
+    return substring + word
 }
 
-func deletePrefix(string word: String, prefix endWith: Int) -> String {
-    var wordSet = Array(word); let limit = (word.count - endWith) - 1
+func deletePrefix(string word: String, prefix startWith: String) -> String {
+    /* var wordSet = Array(word); let limit = (word.count - endWith) - 1
     for index in stride(from: word.count - 1, to: limit, by: -1) {
         wordSet.remove(at: index)
     }
-    return String(wordSet)
+    return String(wordSet) */
+    if word.hasPrefix(startWith) {
+        return word.replacing(startWith, with: "")
+    }
+    return "startWith is not matching with string"
 }
