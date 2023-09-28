@@ -41,9 +41,9 @@ class Playlist {
     }
     
     // Getting songs details
-    func getSong(index i: Int) -> Song? {
-        if i < songs.count { return songs[i] }
-        else { return nil }
+    func getSong(index i: Int) -> String {
+        if i < songs.count { return songs[i].toString() }
+        else { return "Invalid Index" }
     }
     
     // Remove songs from the playlist
@@ -53,7 +53,7 @@ class Playlist {
             if song.name.elementsEqual(name) {
                 songs.remove(at: index)
                 _size -= 1
-                return "song removed from playlist"
+                return "****** song removed from playlist ********"
             }
             index += 1
         }
@@ -62,7 +62,9 @@ class Playlist {
     
     // Display all the songs in the playlist
     func getAllSongs() {
-       let _ = songs.compactMap { print($0.toString()) }
+        if !songs.isEmpty {
+            let _ = songs.compactMap { print($0.toString()) }
+        }else { print("playlist is empty") }
     }
     
     // Calculating the total length of the playlist
@@ -74,12 +76,10 @@ class Playlist {
     }
     
     // Clearing the list of songs in the playlist
-    func clear() -> String {
-        if !songs.isEmpty {
-            songs.removeAll()
-            return "clear songs from the playlist"
-        }
-        return "playlist is empty"
+    func clear() {
+        songs.removeAll()
+        _size = 0
+        print("clear songs from the playlist")
     }
     
     // Formatting time

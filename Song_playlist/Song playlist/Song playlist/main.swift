@@ -14,12 +14,8 @@ let plOne = Playlist(songs: songHolder, _playlistName: "my_songs")
 let plTwo = Playlist(songs: songHolder, _playlistName: "my_fav_song")
 
 // getting song details
-let plOne_song_details = plOne.getSong(index: 7)
-let plTwo_song_details = plTwo.getSong(index: 3)
-
-// printing the song_details
-if let song = plOne_song_details { print(song.toString()) }
-else { print("Invalid Index") }
+print(plOne.getSong(index: 7))
+print(plTwo.getSong(index: 3))
 
 // Remove song from playlist
 print(plOne.removeSong(song_name: "Hukum"))
@@ -31,3 +27,7 @@ plOne.getAllSongs()
 print("Available songs in playlist : ",plOne.size)
 print("Total time in the playlist : ",plOne.totalTime())
 print("Formatted Time : ",plOne.formattedTotalTime())
+
+plOne.clear()
+
+
